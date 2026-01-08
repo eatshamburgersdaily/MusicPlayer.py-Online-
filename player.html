@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Audio Player + Skid Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- HTML Obfuscated using entity_encoding method -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Audio Player + Skid Title&lt;/title&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
 
-  <style>
+  &lt;style&gt;
     /* PAGE LAYOUT */
     body {
       margin: 0;
@@ -196,49 +197,49 @@
       cursor: pointer;
       border: none;
     }
-  </style>
-</head>
+  &lt;/style&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-  <!-- ANIMATED TITLE -->
-  <p class="skid-title">SKIDDED BY ARIS_VPNZ</p>
+  &lt;!-- ANIMATED TITLE --&gt;
+  &lt;p class=&quot;skid-title&quot;&gt;SKIDDED BY ARIS_VPNZ&lt;/p&gt;
 
-  <!-- AUDIO PLAYER -->
-  <div class="audio-player">
-    <div id="notification" class="notification">
-      <span id="notification-text"></span>
-      <button class="close-btn" onclick="hideNotification()">x</button>
-    </div>
+  &lt;!-- AUDIO PLAYER --&gt;
+  &lt;div class=&quot;audio-player&quot;&gt;
+    &lt;div id=&quot;notification&quot; class=&quot;notification&quot;&gt;
+      &lt;span id=&quot;notification-text&quot;&gt;&lt;/span&gt;
+      &lt;button class=&quot;close-btn&quot; onclick=&quot;hideNotification()&quot;&gt;x&lt;/button&gt;
+    &lt;/div&gt;
 
-    <input type="file" id="fileInput" multiple accept="audio/*" onchange="loadFiles(event)" hidden>
-    <button onclick="document.getElementById('fileInput').click()" class="choose-song-btn">
-      <i class="fas fa-folder-open"></i> choose
-    </button>
+    &lt;input type=&quot;file&quot; id=&quot;fileInput&quot; multiple accept=&quot;audio/*&quot; onchange=&quot;loadFiles(event)&quot; hidden&gt;
+    &lt;button onclick=&quot;document.getElementById(&#x27;fileInput&#x27;).click()&quot; class=&quot;choose-song-btn&quot;&gt;
+      &lt;i class=&quot;fas fa-folder-open&quot;&gt;&lt;/i&gt; choose
+    &lt;/button&gt;
 
-    <div class="playlist" id="playlist"></div>
+    &lt;div class=&quot;playlist&quot; id=&quot;playlist&quot;&gt;&lt;/div&gt;
 
-    <div class="progress-container">
-      <span id="current-time">0:00</span>
-      <input type="range" id="progress-bar" min="0" max="100" value="0" onchange="seekAudio()">
-      <span id="total-duration">0:00</span>
-    </div>
+    &lt;div class=&quot;progress-container&quot;&gt;
+      &lt;span id=&quot;current-time&quot;&gt;0:00&lt;/span&gt;
+      &lt;input type=&quot;range&quot; id=&quot;progress-bar&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; onchange=&quot;seekAudio()&quot;&gt;
+      &lt;span id=&quot;total-duration&quot;&gt;0:00&lt;/span&gt;
+    &lt;/div&gt;
 
-    <div class="player-controls">
-      <button class="control-btn" onclick="prevTrack()"><i class="fas fa-backward"></i></button>
-      <button class="control-btn" onclick="playPause()"><i class="fas fa-play" id="play-icon"></i></button>
-      <button class="control-btn" onclick="nextTrack()"><i class="fas fa-forward"></i></button>
-      <button class="control-btn stop-btn" onclick="stopPlayback()"><i class="fas fa-stop"></i></button>
-    </div>
+    &lt;div class=&quot;player-controls&quot;&gt;
+      &lt;button class=&quot;control-btn&quot; onclick=&quot;prevTrack()&quot;&gt;&lt;i class=&quot;fas fa-backward&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button class=&quot;control-btn&quot; onclick=&quot;playPause()&quot;&gt;&lt;i class=&quot;fas fa-play&quot; id=&quot;play-icon&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button class=&quot;control-btn&quot; onclick=&quot;nextTrack()&quot;&gt;&lt;i class=&quot;fas fa-forward&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button class=&quot;control-btn stop-btn&quot; onclick=&quot;stopPlayback()&quot;&gt;&lt;i class=&quot;fas fa-stop&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
 
-    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" onchange="changeVolume()" class="slider">
-    <div class="volume-display">volume: <span id="volume-display">50%</span></div>
+    &lt;input type=&quot;range&quot; id=&quot;volume&quot; min=&quot;0&quot; max=&quot;1&quot; step=&quot;0.01&quot; value=&quot;0.5&quot; onchange=&quot;changeVolume()&quot; class=&quot;slider&quot;&gt;
+    &lt;div class=&quot;volume-display&quot;&gt;volume: &lt;span id=&quot;volume-display&quot;&gt;50%&lt;/span&gt;&lt;/div&gt;
 
-    <input type="range" id="speed" min="0.5" max="2" step="0.1" value="1" onchange="changeSpeed()" class="slider">
-    <div class="volume-display">speed: <span id="speed-display">1x</span></div>
-  </div>
+    &lt;input type=&quot;range&quot; id=&quot;speed&quot; min=&quot;0.5&quot; max=&quot;2&quot; step=&quot;0.1&quot; value=&quot;1&quot; onchange=&quot;changeSpeed()&quot; class=&quot;slider&quot;&gt;
+    &lt;div class=&quot;volume-display&quot;&gt;speed: &lt;span id=&quot;speed-display&quot;&gt;1x&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
 
-  <script>
+  &lt;script&gt;
     /* FULL PLAYER JAVASCRIPT (unchanged) */
     let currentTrack = 0;
     let isPlaying = false;
@@ -247,8 +248,8 @@
 
     function loadFiles(event) {
       const files = Array.from(event.target.files).slice(0, 5);
-      if (playlist.length + files.length > 5) {
-        showNotification("u can only add up to 5 songs");
+      if (playlist.length + files.length &gt; 5) {
+        showNotification(&quot;u can only add up to 5 songs&quot;);
         return;
       }
       playlist = [...playlist, ...files];
@@ -256,84 +257,84 @@
     }
 
     function renderPlaylist() {
-      const playlistDiv = document.getElementById("playlist");
-      playlistDiv.innerHTML = '';
-      playlist.forEach((track, index) => {
-        const trackElement = document.createElement("div");
-        trackElement.className = "track";
+      const playlistDiv = document.getElementById(&quot;playlist&quot;);
+      playlistDiv.innerHTML = &#x27;&#x27;;
+      playlist.forEach((track, index) =&gt; {
+        const trackElement = document.createElement(&quot;div&quot;);
+        trackElement.className = &quot;track&quot;;
         trackElement.innerHTML = `${index + 1}. ${track.name}`;
 
-        const buttonContainer = document.createElement("div");
-        buttonContainer.className = "track-buttons";
+        const buttonContainer = document.createElement(&quot;div&quot;);
+        buttonContainer.className = &quot;track-buttons&quot;;
 
-        const deleteButton = document.createElement("i");
-        deleteButton.className = "fas fa-trash";
-        deleteButton.onclick = () => deleteTrack(index);
+        const deleteButton = document.createElement(&quot;i&quot;);
+        deleteButton.className = &quot;fas fa-trash&quot;;
+        deleteButton.onclick = () =&gt; deleteTrack(index);
 
         buttonContainer.appendChild(deleteButton);
         trackElement.appendChild(buttonContainer);
 
-        trackElement.onclick = () => selectTrack(index);
+        trackElement.onclick = () =&gt; selectTrack(index);
         playlistDiv.appendChild(trackElement);
       });
     }
 
     function playPause() {
       if (playlist.length === 0) {
-        showNotification("no songs available to play");
+        showNotification(&quot;no songs available to play&quot;);
         return;
       }
 
       if (isPlaying) {
         audio.pause();
-        document.querySelector("#play-icon").classList.replace("fa-pause", "fa-play");
-        showNotification("paused");
+        document.querySelector(&quot;#play-icon&quot;).classList.replace(&quot;fa-pause&quot;, &quot;fa-play&quot;);
+        showNotification(&quot;paused&quot;);
       } else {
-        audio.play().catch(error => console.error("404:", error));
-        document.querySelector("#play-icon").classList.replace("fa-play", "fa-pause");
-        showNotification("playing");
+        audio.play().catch(error =&gt; console.error(&quot;404:&quot;, error));
+        document.querySelector(&quot;#play-icon&quot;).classList.replace(&quot;fa-play&quot;, &quot;fa-pause&quot;);
+        showNotification(&quot;playing&quot;);
       }
       isPlaying = !isPlaying;
     }
 
     function stopPlayback() {
       if (playlist.length === 0) {
-        showNotification("no songs available to stop");
+        showNotification(&quot;no songs available to stop&quot;);
         return;
       }
 
       audio.pause();
       audio.currentTime = 0;
-      document.querySelector("#play-icon").classList.replace("fa-pause", "fa-play");
-      showNotification("stopped");
+      document.querySelector(&quot;#play-icon&quot;).classList.replace(&quot;fa-pause&quot;, &quot;fa-play&quot;);
+      showNotification(&quot;stopped&quot;);
       isPlaying = false;
     }
 
     function selectTrack(trackIndex) {
       if (playlist.length === 0) {
-        showNotification("no songs available to play");
+        showNotification(&quot;no songs available to play&quot;);
         return;
       }
 
       currentTrack = trackIndex;
       audio.src = URL.createObjectURL(playlist[currentTrack]);
-      audio.play().catch(error => console.error("404:", error));
+      audio.play().catch(error =&gt; console.error(&quot;404:&quot;, error));
       isPlaying = true;
       updateDuration();
       showNotification(`playing: ${playlist[currentTrack].name}`);
-      document.querySelector("#play-icon").classList.replace("fa-play", "fa-pause");
+      document.querySelector(&quot;#play-icon&quot;).classList.replace(&quot;fa-play&quot;, &quot;fa-pause&quot;);
     }
 
     function updateDuration() {
-      const progressBar = document.getElementById("progress-bar");
+      const progressBar = document.getElementById(&quot;progress-bar&quot;);
 
-      audio.onloadedmetadata = () => {
-        document.getElementById("total-duration").textContent = formatTime(audio.duration);
+      audio.onloadedmetadata = () =&gt; {
+        document.getElementById(&quot;total-duration&quot;).textContent = formatTime(audio.duration);
         progressBar.max = audio.duration;
       };
 
-      audio.ontimeupdate = () => {
-        document.getElementById("current-time").textContent = formatTime(audio.currentTime);
+      audio.ontimeupdate = () =&gt; {
+        document.getElementById(&quot;current-time&quot;).textContent = formatTime(audio.currentTime);
         progressBar.value = audio.currentTime;
       };
     }
@@ -341,11 +342,11 @@
     function formatTime(seconds) {
       const mins = Math.floor(seconds / 60);
       const secs = Math.floor(seconds % 60);
-      return `${mins}:${secs < 10 ? '0' + secs : secs}`;
+      return `${mins}:${secs &lt; 10 ? &#x27;0&#x27; + secs : secs}`;
     }
 
     function seekAudio() {
-      audio.currentTime = document.getElementById("progress-bar").value;
+      audio.currentTime = document.getElementById(&quot;progress-bar&quot;).value;
     }
 
     function nextTrack() {
@@ -359,35 +360,35 @@
     }
 
     function changeVolume() {
-      audio.volume = document.getElementById("volume").value;
-      document.getElementById("volume-display").innerText = `${Math.floor(audio.volume * 100)}%`;
+      audio.volume = document.getElementById(&quot;volume&quot;).value;
+      document.getElementById(&quot;volume-display&quot;).innerText = `${Math.floor(audio.volume * 100)}%`;
     }
 
     function changeSpeed() {
-      audio.playbackRate = document.getElementById("speed").value;
-      document.getElementById("speed-display").innerText = `${audio.playbackRate}x`;
+      audio.playbackRate = document.getElementById(&quot;speed&quot;).value;
+      document.getElementById(&quot;speed-display&quot;).innerText = `${audio.playbackRate}x`;
     }
 
     function showNotification(message) {
-      const notification = document.getElementById("notification");
-      const notificationText = document.getElementById("notification-text");
+      const notification = document.getElementById(&quot;notification&quot;);
+      const notificationText = document.getElementById(&quot;notification-text&quot;);
       notificationText.innerText = message;
-      notification.style.display = "flex";
-      setTimeout(() => {
-        notification.style.display = "none";
+      notification.style.display = &quot;flex&quot;;
+      setTimeout(() =&gt; {
+        notification.style.display = &quot;none&quot;;
       }, 3000);
     }
 
     function hideNotification() {
-      document.getElementById("notification").style.display = "none";
+      document.getElementById(&quot;notification&quot;).style.display = &quot;none&quot;;
     }
 
     function deleteTrack(index) {
       playlist.splice(index, 1);
       renderPlaylist();
-      showNotification("track deleted");
+      showNotification(&quot;track deleted&quot;);
     }
-  </script>
+  &lt;/script&gt;
 
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
